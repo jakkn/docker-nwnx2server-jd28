@@ -1,7 +1,7 @@
 version: '2'
 services:
   nwnserver:
-    image: jakkn/nwnx2server:latest
+    image: jakkn/nwnx2server-jd28:latest
   
     working_dir: /opt/nwnserver/
   
@@ -16,6 +16,7 @@ services:
     command: ./compose-nwnx2setup.sh
       --profiler
       --mysql
+      --haks
       -publicserver 1
       -servername "Containerized nwnx2-linuxserver"
       -dmpassword dmpw
