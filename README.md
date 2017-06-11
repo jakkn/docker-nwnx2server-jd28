@@ -1,7 +1,7 @@
-# docker-nwnx2server
-Containerization of NWNX2 server on Linux.
+# docker-nwnx2server-jd28
+Containerization of NWNX2 server on Linux from jd28's fork that supports [nwnx-haks](https://github.com/jd28/nwnx-haks)
 
-Base image is in [docker-nwnserver](https://github.com/jakkn/docker-nwnserver)
+Base on [docker-nwnserver](https://github.com/jakkn/docker-nwnserver), with [docker-nwnx2server](https://github.com/jakkn/docker-nwnx2server) as a boilerplate.
 
 ## Run
 ```
