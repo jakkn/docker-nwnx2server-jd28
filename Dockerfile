@@ -7,8 +7,9 @@ WORKDIR /usr/local/src
 RUN downloadDeps='git' \
     && apt update \
     && apt install -y $downloadDeps \
-    && git clone https://github.com/NWNX/nwnx2-linux.git \
+    && git clone -b pr-api-definitions https://github.com/jd28/nwnx2-linux.git \
     && cd nwnx2-linux \
+    && sed -i -e 's/.file"nwnsyms.S"/.file "nwnsyms.S"/' api/nwnsyms.S \
     && rm -rf plugins/jvm \
     && buildDeps=`find . -name apt-dep -exec cat {} \;` \
     && apt install -y $buildDeps \
